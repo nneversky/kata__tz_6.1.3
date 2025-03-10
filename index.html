@@ -7,7 +7,61 @@
     <title>Webpack 4 Starter</title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px">
-    <h3>Welcome to Webpack 4 starter </h3>
+    <header class="header">
+      <div class="header__left-side">
+        <button class="header__menu header__btn"></button>
+        <img src="/src/img/border-line.svg" class="header__border-line header__btn--hidden">
+        <a href="#"><img src="/src/img/logo.svg" class="header__logo" alt="logo"></a>
+      </div>
+      <img src="/src/img/border-line.svg" class="header__border-line header__border-line--hidden">
+      <div class="header__right-side">
+        <button class="header__call header__btn--hidden header__btn"></button>
+        <button class="header__chat header__btn--hidden header__btn"></button>
+        <button class="header__profile header__btn--hidden header__btn"></button>
+        <img src="/src/img/border-line.svg" class="header__border-line header__btn--hidden">
+        <button class="header__settings header__btn"></button>
+        <button class="header__search header__btn"></button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__title">
+        <div class="main__title-service">
+          <img class="main__title-left-border" src="/src/img/left-border.svg" alt="left border">
+          <p class="main__title-text">Услуги и сервисы</p>
+        </div>
+        <div class="main__title-buttons">
+          <div class="main__btn main__btn--settings">
+            <p class="main__btn-text">Оставить заявку</p>
+            <button class="header__settings header__btn"></button>
+          </div>
+          <div class="main__btn main__btn--search">
+            <p class="main__btn-text">Статус ремонта</p>
+            <button class="header__search header__btn"></button>
+          </div>
+        </div>
+      </div>
+      <div class="main__scroll-side-bar">
+        <nav class="main__side-bar-nav">
+          <a href="#" class="main__side-bar-link main__side-bar-link--devices">Ремонтируемые устройства</a>
+          <a href="#" class="main__side-bar-link main__side-bar-link--services">Дополнительные услуги</a>
+          <a href="#" class="main__side-bar-link main__side-bar-link--price-services">Цены на услуги</a>
+          <a href="#" class="main__side-bar-link main__side-bar-link--price">Специальные цены</a>
+          <a href="#" class="main__side-bar-link main__side-bar-link--address">Адреса сервисных центров</a>
+          <a href="#" class="main__side-bar-link main__side-bar-link--reviews">Отзывы</a>
+        </nav>
+      </div>
+      <div class="main__description">
+        <div class="main__about">
+          <div class="main__about-description">
+            <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+            <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+          </div>
+          <button class="main__about-read-more">Читать далее</button>
+        </div>
+        <div class="main__description-picture">
+          <img class="main__img-cps" srcset="" src="/src/img/picture_CPS.png" alt="office cps">
+        </div>
+      </div>
+    </main>
   <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
