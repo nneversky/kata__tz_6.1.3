@@ -10,23 +10,52 @@
     <header class="header">
       <div class="header__left-side">
         <button class="header__menu header__btn"></button>
-        <img src="/src/img/border-line.svg" class="header__border-line header__btn--hidden">
+        <div class="header__border-line header__left-border header__btn--hidden"></div>
         <a href="#"><img src="/src/img/logo.svg" class="header__logo" alt="logo"></a>
       </div>
-      <img src="/src/img/border-line.svg" class="header__border-line header__border-line--hidden">
       <div class="header__right-side">
         <button class="header__call header__btn--hidden header__btn"></button>
         <button class="header__chat header__btn--hidden header__btn"></button>
         <button class="header__profile header__btn--hidden header__btn"></button>
-        <img src="/src/img/border-line.svg" class="header__border-line header__btn--hidden">
+        <div class="header__border-line header__btn--hidden"></div>
         <button class="header__settings header__btn"></button>
         <button class="header__search header__btn"></button>
       </div>
     </header>
+    <div class="sidebar">
+      <div class="side-menu">
+        <button class="side-menu__button">Ремонт техники</button>
+        <button class="side-menu__button side-menu__button--active">Услуги и сервисы</button>
+        <button class="side-menu__button">Корпоративным клиентам</button>
+        <button class="side-menu__button">Продавцам техники</button>
+        <button class="side-menu__button">Партнерам</button>
+        <button class="side-menu__button">Производителям</button>
+        <button class="side-menu__button">Наши сервисные центры</button>
+        <button class="side-menu__button">Контакты</button>
+      </div>
+      <div class="page-footer">
+        <div class="page-footer__contacts">
+          <div class="page-footer__buttons">
+            <button class="page-footer__call-button button"></button>
+            <button class="page-footer__chat-button button"></button>
+            <button class="page-footer__profile-button button"></button>
+          </div>
+          <div class="contacts">
+            <span class="page-footer__email">mail@cps.com</span>
+            <span class="page-footer__phone">8 800 890 8900</span>
+          </div>
+        </div>
+        <div class="page-footer__language-switcher">
+          <button class="page-footer__language-button page-footer__language-button--active">RU</button>
+          <button class="page-footer__language-button">EN</button>
+          <button class="page-footer__language-button">CH</button>
+        </div>
+      </div>
+    </div>
     <main class="main">
       <div class="main__title">
         <div class="main__title-service">
-          <img class="main__title-left-border" src="/src/img/left-border.svg" alt="left border">
+          <div class="main__title-left-border"></div>
           <p class="main__title-text">Услуги и сервисы</p>
         </div>
         <div class="main__title-buttons">
@@ -40,6 +69,9 @@
           </div>
         </div>
       </div>
+      
+      
+      
       <div class="main__scroll-side-bar">
         <nav class="main__side-bar-nav">
           <a href="#" class="main__side-bar-link main__side-bar-link--devices">Ремонтируемые устройства</a>
@@ -53,8 +85,13 @@
       <div class="main__description">
         <div class="main__about">
           <div class="main__about-description">
-            <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-            <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+            <p>Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.</p>
+            <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.</p>
           </div>
           <button class="main__about-read-more">Читать далее</button>
         </div>
