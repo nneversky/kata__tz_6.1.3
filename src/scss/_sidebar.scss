@@ -1,0 +1,107 @@
+.sidebar {
+  display: none;
+  position: absolute;
+  top: 0;
+  margin-top: 85px;
+  min-width: 768px;
+  height: 100vh;
+  background-color: $bgColor;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar--open {
+  display: block;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu__button {
+  box-sizing: border-box;
+  border: none;
+  display: flex;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.side-menu__button--active {
+  display: flex;
+  align-items: center;
+  transform: translateX(-6px);
+  gap: 15px;
+  margin-left: 0;
+  color: $secondaryTextColor;
+  border: none;
+}
+
+.side-menu__button--active::before {
+  content: '';
+  display: flex;
+  width: 4px;
+  height: 32px;
+  background: url('/src/img/left-border.svg');
+}
+
+.button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.page-footer__call-button {
+  background: url('/src/img/call-ic.svg');
+}
+
+.page-footer__chat-button {
+  background-image: url('/src/img/chat-ic.svg');
+}
+
+.page-footer__profile-button {
+  background-image: url('/src/img/profile-ic.svg');
+}
+
+.page-footer {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.contacts {
+  margin-top: 15px;
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+}
+
+.page-footer__email {
+  font-weight: 600;
+}
+
+.page-footer__phone {
+  font-weight: bold;
+}
+
+.page-footer__buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.page-footer__language-button {
+  border: none;
+  cursor: pointer;
+}
+
+.page-footer__language-button--active {
+  color: $secondaryTextColor;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    min-width: 320px;
+  }
+}
