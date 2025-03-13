@@ -76,9 +76,14 @@ html {
   background-image: url('/src/img/search.svg');
 }
 
+.header__lens {
+  background-image: url('/src/img/lens.svg');
+}
+
 .header__menu {
   transition: all 300ms ease-in-out;
 }
+
 
 .button--close {
   transform: rotate(-180deg);
@@ -110,6 +115,10 @@ html {
   height: 32px;
   width: 2px;
   background: url('/src/img/border-line.svg');
+}
+
+.main, .header {
+  transition: all 0.2s ease-in-out;
 }
 
 .main__title-service {
@@ -300,6 +309,10 @@ html {
     html {
       margin: 0 auto;
       width: 1096px;
+    }
+
+    body{
+      display: flex;
     }
 
     .header {

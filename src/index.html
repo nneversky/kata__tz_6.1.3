@@ -26,12 +26,27 @@
         <button
           class="header__profile header__btn--hidden header__btn"
         ></button>
-        <div class="header__border-line header__btn--hidden"></div>
-        <button class="header__settings header__btn"></button>
-        <button class="header__search header__btn"></button>
+        <div
+          class="header__border-line header__btn--hidden header__btn--hidden-on-click-menu"
+        ></div>
+        <button
+          class="header__settings header__btn header__btn--hidden-on-click-menu"
+        ></button>
+        <button
+          class="header__search header__btn header__btn--hidden-on-click-menu"
+        ></button>
       </div>
     </header>
     <div class="sidebar">
+      <div class="header__sidebar">
+        <div class="header__sidebar--left-side">
+          <button class="header__close header__btn"></button>
+          <a href="#"
+            ><img src="/src/img/logo.svg" class="header__logo" alt="logo"
+          /></a>
+        </div>
+        <button class="header__lens header__btn"></button>
+      </div>
       <div class="side-menu">
         <button class="side-menu__button">Ремонт техники</button>
         <button class="side-menu__button side-menu__button--active"
@@ -83,43 +98,6 @@
           </div>
         </div>
       </div>
-      <!-- left-menu -->
-      <!-- <div class="sidebar">
-        <div class="side-menu">
-          <button class="side-menu__button">Ремонт техники</button>
-          <button class="side-menu__button side-menu__button--active"
-            >Услуги и сервисы</button
-          >
-          <button class="side-menu__button">Корпоративным клиентам</button>
-          <button class="side-menu__button">Продавцам техники</button>
-          <button class="side-menu__button">Партнерам</button>
-          <button class="side-menu__button">Производителям</button>
-          <button class="side-menu__button">Наши сервисные центры</button>
-          <button class="side-menu__button">Контакты</button>
-        </div>
-        <div class="page-footer">
-          <div class="page-footer__contacts">
-            <div class="page-footer__buttons">
-              <button class="page-footer__call-button button"></button>
-              <button class="page-footer__chat-button button"></button>
-              <button class="page-footer__profile-button button"></button>
-            </div>
-            <div class="contacts">
-              <span class="page-footer__email">mail@cps.com</span>
-              <span class="page-footer__phone">8 800 890 8900</span>
-            </div>
-          </div>
-          <div class="page-footer__language-switcher">
-            <button
-              class="page-footer__language-button page-footer__language-button--active"
-              >RU</button
-            >
-            <button class="page-footer__language-button">EN</button>
-            <button class="page-footer__language-button">CH</button>
-          </div>
-        </div>
-      </div> -->
-      <!-- /left-menu -->
       <div class="main__scroll-side-bar">
         <nav class="main__side-bar-nav">
           <a href="#" class="main__side-bar-link main__side-bar-link--devices"

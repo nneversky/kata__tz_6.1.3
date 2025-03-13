@@ -4,19 +4,18 @@ console.log('Works!')
 
 const sidebar = document.querySelector('.sidebar')
 const openButton = document.querySelector('.header__menu')
+const closeButton = document.querySelector('.header__close')
 const mainElBlur = document.querySelector('.main')
-const state = { asideOpen: false }
+const headElBlur = document.querySelector('.header')
 
 openButton.addEventListener('click', () => {
-  if (!state.asideOpen) {
-    sidebar.classList.add('sidebar--open')
-    openButton.classList.add('button--close')
-    mainElBlur.style.setProperty('filter', 'blur(2px)')
-    state.asideOpen = true
-  } else {
-    mainElBlur.style.setProperty('filter', 'blur(0)')
-    sidebar.classList.remove('sidebar--open')
-    openButton.classList.remove('button--close')
-    state.asideOpen = false
-  }
+  sidebar.classList.add('sidebar--open')
+  mainElBlur.style.setProperty('filter', 'blur(2px)')
+  headElBlur.style.setProperty('filter', 'blur(2px)')
+})
+
+closeButton.addEventListener('click', () => {
+  sidebar.classList.remove('sidebar--open')
+  mainElBlur.style.setProperty('filter', 'blur(0)')
+  headElBlur.style.setProperty('filter', 'blur(0)')
 })
