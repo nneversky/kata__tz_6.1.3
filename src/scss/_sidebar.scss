@@ -3,10 +3,10 @@
   position: absolute;
   top: 0;
   width: 100%;
-  min-height: 700px;
+  min-height: 900px;
   background-color: $bgColor;
   z-index: 1000;
-  transform: translateX(-500px);
+  transform: translateX(-900px);
   transition: all 0.4s ease-in-out;
 }
 
@@ -39,7 +39,6 @@
   display: flex;
   margin-bottom: 25px;
   margin-left: 15px;
-  cursor: pointer;
 }
 
 .side-menu__button--active {
@@ -52,12 +51,21 @@
   border: none;
 }
 
+.side-menu__button--no-active {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.side-menu__button--no-active:hover {
+  opacity: 0.6;
+}
+
 .side-menu__button--active::before {
   content: '';
   display: flex;
   width: 4px;
   height: 32px;
-  background: url('/src/img/left-border.svg');
+  background: url('../img/left-border.svg');
 }
 
 .button {
@@ -66,22 +74,27 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.6;
 }
 
 .header__close {
-  background: url('/src/img/close.svg');
+  background: url('../img/close.svg');
 }
 
 .page-footer__call-button {
-  background: url('/src/img/call-ic.svg');
+  background: url('../img/call-ic.svg');
 }
 
 .page-footer__chat-button {
-  background-image: url('/src/img/chat-ic.svg');
+  background: url('../img/chat-ic.svg');
 }
 
 .page-footer__profile-button {
-  background-image: url('/src/img/profile-ic.svg');
+  background: url('../img/profile-ic.svg');
 }
 
 .page-footer {

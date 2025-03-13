@@ -4,21 +4,21 @@
 @font-face {
   font-family: 'TTLakes';
   src: local('TTLakesCondensed'), local('TTLakes-Regular'),
-    url('/src/fonts/TTLakes-Regular.woff') format('woff');
+    url('../fonts/TTLakes-Regular.woff') format('woff');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'TTLakes';
   src: local('TTLakesCondensed'), local('TTLakes-Medium'),
-    url('/src/fonts/TTLakes-Medium.woff') format('woff');
+    url('../fonts/TTLakes-Medium.woff') format('woff');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'TTLakes';
   src: local('TTLakesCondensed'), local('TTLakes-Bold'),
-    url('/src/fonts/TTLakes-Bold.woff') format('woff');
+    url('../fonts/TTLakes-Bold.woff') format('woff');
   font-weight: bold;
 }
 
@@ -50,34 +50,39 @@ html {
   background-repeat: no-repeat;
   border: none;
   background-color: $iconColor;
+  transition: all 0.2s ease-in-out;
+}
+
+.header__btn:hover {
+  opacity: 0.6;
 }
 
 .header__menu {
-  background-image: url('/src/img/menu-ic.svg');
+  background-image: url('../img/menu-ic.svg');
 }
 
 .header__call {
-  background-image: url('/src/img/call-ic.svg');
+  background-image: url('../img/call-ic.svg');
 }
 
 .header__chat {
-  background-image: url('/src/img/chat-ic.svg');
+  background-image: url('../img/chat-ic.svg');
 }
 
 .header__profile {
-  background-image: url('/src/img/profile-ic.svg');
+  background-image: url('../img/profile-ic.svg');
 }
 
 .header__settings {
-  background-image: url('/src/img/settings.svg');
+  background-image: url('../img/settings.svg');
 }
 
 .header__search {
-  background-image: url('/src/img/search.svg');
+  background-image: url('../img/search.svg');
 }
 
 .header__lens {
-  background-image: url('/src/img/lens.svg');
+  background-image: url('../img/lens.svg');
 }
 
 .header__menu {
@@ -87,7 +92,7 @@ html {
 
 .button--close {
   transform: rotate(-180deg);
-  background: url('/src/img/close.svg');
+  background: url('../img/close.svg');
 }
 
 .header {
@@ -114,7 +119,7 @@ html {
   align-self: center;
   height: 32px;
   width: 2px;
-  background: url('/src/img/border-line.svg');
+  background: url('../img/border-line.svg');
 }
 
 .main, .header {
@@ -205,7 +210,7 @@ html {
   content: ' ';
   width: 8px;
   height: 11px;
-  background-image: url('/src/img/arrow.svg');
+  background-image: url('../img/arrow.svg');
   background-repeat: no-repeat;
   display: block;
 }
@@ -229,7 +234,7 @@ html {
   content: '';
   width: 4px;
   height: 40px;
-  background: url('/src/img/left-border.svg');
+  background: url('../img/left-border.svg');
 }
 
 @media (min-width: 768px) {
