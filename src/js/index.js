@@ -8,6 +8,7 @@ const closeButton = document.querySelector('.header__close')
 const mainElBlur = document.querySelector('.main')
 const headElBlur = document.querySelector('.header')
 
+
 openButton.addEventListener('click', () => {
   sidebar.classList.add('sidebar--open')
   mainElBlur.style.setProperty('filter', 'blur(2px)')

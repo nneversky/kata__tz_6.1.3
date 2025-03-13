@@ -123,7 +123,12 @@
 }
 
 .page-footer__language-button {
+  transition: all 0.1s ease-in-out;
   border: none;
+}
+
+.page-footer__language-button--no-active:hover {
+  opacity: 0.6;
   cursor: pointer;
 }
 
