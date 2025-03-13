@@ -63,13 +63,13 @@
   background: url("/src/img/close.svg"); }
 
 .page-footer__call-button {
-  background: url("/src/img/call-ic.svg"); }
+  background: url(./static/call-ic.svg); }
 
 .page-footer__chat-button {
-  background-image: url("/src/img/chat-ic.svg"); }
+  background: url(./static/chat-ic.svg); }
 
 .page-footer__profile-button {
-  background-image: url("/src/img/profile-ic.svg"); }
+  background: url(./static/profile-ic.svg); }
 
 .page-footer {
   margin: 25px;
