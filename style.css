@@ -3,10 +3,10 @@
   position: absolute;
   top: 0;
   width: 100%;
-  min-height: 700px;
+  min-height: 900px;
   background-color: #ffffff;
   z-index: 1000;
-  transform: translateX(-500px);
+  transform: translateX(-900px);
   transition: all 0.4s ease-in-out; }
 
 .header__sidebar {
@@ -33,8 +33,7 @@
   border: none;
   display: flex;
   margin-bottom: 25px;
-  margin-left: 15px;
-  cursor: pointer; }
+  margin-left: 15px; }
 
 .side-menu__button--active {
   display: flex;
@@ -45,22 +44,33 @@
   color: #7e7e82;
   border: none; }
 
+.side-menu__button--no-active {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out; }
+
+.side-menu__button--no-active:hover {
+  opacity: 0.6; }
+
 .side-menu__button--active::before {
   content: '';
   display: flex;
   width: 4px;
   height: 32px;
-  background: url("/src/img/left-border.svg"); }
+  background: url(./static/left-border.svg); }
 
 .button {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; }
+
+.button:hover {
+  opacity: 0.6; }
 
 .header__close {
-  background: url("/src/img/close.svg"); }
+  background: url(./static/close.svg); }
 
 .page-footer__call-button {
   background: url(./static/call-ic.svg); }
@@ -112,17 +122,17 @@
 
 @font-face {
   font-family: 'TTLakes';
-  src: local("TTLakesCondensed"), local("TTLakes-Regular"), url("/src/fonts/TTLakes-Regular.woff") format("woff");
+  src: local("TTLakesCondensed"), local("TTLakes-Regular"), url(./fonts/TTLakes-Regular.woff) format("woff");
   font-weight: normal; }
 
 @font-face {
   font-family: 'TTLakes';
-  src: local("TTLakesCondensed"), local("TTLakes-Medium"), url("/src/fonts/TTLakes-Medium.woff") format("woff");
+  src: local("TTLakesCondensed"), local("TTLakes-Medium"), url(./fonts/TTLakes-Medium.woff) format("woff");
   font-weight: 600; }
 
 @font-face {
   font-family: 'TTLakes';
-  src: local("TTLakesCondensed"), local("TTLakes-Bold"), url("/src/fonts/TTLakes-Bold.woff") format("woff");
+  src: local("TTLakesCondensed"), local("TTLakes-Bold"), url(./fonts/TTLakes-Bold.woff) format("woff");
   font-weight: bold; }
 
 * {
@@ -149,35 +159,39 @@ html {
   height: 40px;
   background-repeat: no-repeat;
   border: none;
-  background-color: #f8f8f8; }
+  background-color: #f8f8f8;
+  transition: all 0.2s ease-in-out; }
+
+.header__btn:hover {
+  opacity: 0.6; }
 
 .header__menu {
-  background-image: url("/src/img/menu-ic.svg"); }
+  background-image: url(./static/menu-ic.svg); }
 
 .header__call {
-  background-image: url("/src/img/call-ic.svg"); }
+  background-image: url(./static/call-ic.svg); }
 
 .header__chat {
-  background-image: url("/src/img/chat-ic.svg"); }
+  background-image: url(./static/chat-ic.svg); }
 
 .header__profile {
-  background-image: url("/src/img/profile-ic.svg"); }
+  background-image: url(./static/profile-ic.svg); }
 
 .header__settings {
-  background-image: url("/src/img/settings.svg"); }
+  background-image: url(./static/settings.svg); }
 
 .header__search {
-  background-image: url("/src/img/search.svg"); }
+  background-image: url(./static/search.svg); }
 
 .header__lens {
-  background-image: url("/src/img/lens.svg"); }
+  background-image: url(./static/lens.svg); }
 
 .header__menu {
   transition: all 300ms ease-in-out; }
 
 .button--close {
   transform: rotate(-180deg);
-  background: url("/src/img/close.svg"); }
+  background: url(./static/close.svg); }
 
 .header {
   display: flex;
@@ -200,7 +214,7 @@ html {
   align-self: center;
   height: 32px;
   width: 2px;
-  background: url("/src/img/border-line.svg"); }
+  background: url(./static/border-line.svg); }
 
 .main, .header {
   transition: all 0.2s ease-in-out; }
@@ -279,7 +293,7 @@ html {
   content: ' ';
   width: 8px;
   height: 11px;
-  background-image: url("/src/img/arrow.svg");
+  background-image: url(./static/arrow.svg);
   background-repeat: no-repeat;
   display: block; }
 
@@ -299,7 +313,7 @@ html {
   content: '';
   width: 4px;
   height: 40px;
-  background: url("/src/img/left-border.svg"); }
+  background: url(./static/left-border.svg); }
 
 @media (min-width: 768px) {
   body,
