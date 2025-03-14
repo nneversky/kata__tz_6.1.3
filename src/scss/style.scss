@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'sidebar';
+@import 'swiper';
 
 @font-face {
   font-family: 'TTLakes';
@@ -39,8 +40,8 @@ html {
   padding: 0;
 }
 
-* {
-  background-color: $iconColor;
+body {
+  margin: 0 auto;
 }
 
 .header__btn {
