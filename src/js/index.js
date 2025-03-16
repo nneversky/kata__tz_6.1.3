@@ -168,3 +168,15 @@ showMoreBtnSwiper.addEventListener('click', () => {
     swiperContainerState.show = false
   }
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper = new Swiper('.service-block--mobile', {
+    loop: false, // Бесконечная прокрутка
+    slidesPerView: 'auto', // Автоматическое количество слайдов
+    spaceBetween: 16, // Расстояние между слайдами
+    pagination: {
+      el: '.swiper-pagination', // Пагинация
+      clickable: true, // Кликабельные точки
+    },
+  });
+});
