@@ -41,6 +41,53 @@
         ></button>
       </div>
     </header>
+    <!-- feedback -->
+    <div class="aside__feedback feedback">
+      <button class="feedback__close header__btn"></button>
+      <div class="feedback__title title">
+        <div class="title__left-border"></div>
+        <p class="title__text">Обратная связь</p>
+      </div>
+      <form action="" class="feedback__form form">
+        <div class="form__block form__block--chat">
+          <label>
+            <input type="text" placeholder="Имя" class="block__input" />
+          </label>
+        </div>
+        <div class="form__block">
+          <label>
+            <input type="text" placeholder="Телефон" class="block__input" />
+          </label>
+        </div>
+        <div class="form__block form__block--chat">
+          <label>
+            <input
+              type="text"
+              placeholder="Электронная почта"
+              class="block__input"
+            />
+          </label>
+        </div>
+        <div class="form__block form__block--chat">
+          <label>
+            <textarea
+              placeholder="Сообщение"
+              class="block__input block__area"
+            ></textarea>
+          </label>
+        </div>
+        <p class="form__text"
+          >Нажимая “отправить”, вы даете согласие на <span class="colortext">обработку персональных
+          данных</span> и соглашаетесь с нашей <span class="colortext">политикой конфиденциальности</span></p
+        >
+      
+      <button class="form__button button">
+        <p class="button__send-text">Отправить</p>
+        <div class="button__arrow-ic"></div>
+      </button>
+    </form>
+    </div>
+    <!-- feedback -->
     <div class="sidebar">
       <div class="header__sidebar">
         <div class="header__sidebar--left-side">
@@ -161,7 +208,10 @@
               очередь, советуют нас родным и близким.</p
             >
           </div>
-          <button class="main__about-read-more">Читать далее</button>
+          <div class="main__about-button about-button">
+            <div class="about-button__arrow"></div>
+            <button class="about-button__read-more main__about-read-more">Читать далее</button>
+          </div>
         </div>
         <div class="main__description-picture">
           <img

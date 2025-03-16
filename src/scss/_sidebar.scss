@@ -145,7 +145,7 @@
 @media (min-width: 1366px) {
   .sidebar {
     display: block;
-    position: static;
+    position: sticky;
     transform: translateX(-40px);
   }
 

@@ -1,0 +1,136 @@
+.aside__feedback {
+  padding-top: 15px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 900px;
+  background-color: $bgColor;
+  z-index: 2000;
+  transform: translateX(2000px);
+  transition: all 0.4s ease-in-out;
+}
+
+.aside__feedback--open {
+  transform: translateX(0);
+}
+
+.feedback__title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.title__left-border::before {
+  display: block;
+  content: '';
+  width: 4px;
+  height: 40px;
+  background: url('../img/left-border.svg');
+}
+
+.title__text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+.form__block {
+  margin-top: 15px;
+}
+
+.block__input {
+  border: 1px $formBorderColor solid;
+  border-radius: 8px;
+  width: 288px;
+  height: 48px;
+  color: $formColor;
+  padding-left: 15px;
+}
+
+.block__area {
+  width: 288px;
+  height: 118px;
+  resize: none;
+}
+
+textarea::placeholder,
+input::placeholder {
+  font-size: 16px;
+}
+
+.feedback__form {
+  margin: 0 auto;
+
+  font-weight: 600;
+  width: 320px;
+}
+
+.form__text {
+  margin-left: 15px;
+  color: $activeBorderColor;
+}
+
+.colortext {
+  color: $pinkColor;
+}
+
+.form__button {
+  margin-left: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: $pinkColor;
+  width: 136px;
+  height: 32px;
+  border-radius: 30px;
+}
+
+.button__arrow-ic {
+  background: url('../img/arrow-right-ic.svg');
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+}
+
+.button__send-text {
+  width: 90px;
+  text-transform: uppercase;
+  background: none;
+  color: $bgColor;
+  font-weight: 600;
+}
+
+.feedback__close {
+  margin-left: 15px;
+  background: url('../img/close.svg');
+}
+
+.form__block--hidden {
+  display: none;
+}
+
+@media (min-width: 1366px) {
+  .aside__feedback {
+    padding-top: 15px;
+    width: 440px;
+    min-height: 900px;
+    border-left: 1px $borderColor solid;
+  }
+
+  .aside__feedback--open {
+    position: fixed;
+    transform: translateX(900px);
+  }
+
+  .feedback__close {
+    border-radius: 50%;
+    position: absolute;
+    left: -80px;
+    transform: translateY(20px);
+
+  }
+}

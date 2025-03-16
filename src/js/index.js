@@ -70,3 +70,57 @@ btnShowMore.addEventListener('click', () => {
     stateShowMore.show = false
   }
 })
+
+const feedbackEl = document.querySelector('.aside__feedback')
+const callBtn = document.querySelector('.page-footer__call-button')
+const chatBtn = document.querySelector('.page-footer__chat-button')
+const feedbackCloseBtn = document.querySelector('.feedback__close')
+const blockInpt = document.querySelectorAll('.form__block--chat')
+const titleContent = document.querySelector('.title__text')
+const sidebarEl = document.querySelector('.sidebar')
+
+callBtn.addEventListener('click', () => {
+  feedbackEl.classList.add('aside__feedback--open')
+  titleContent.textContent = 'Обратная связь'
+  mainElBlur.style.setProperty('filter', 'blur(2px)')
+  sidebarEl.style.setProperty('filter', 'blur(2px)')
+})
+
+feedbackCloseBtn.addEventListener('click', () => {
+  feedbackEl.classList.remove('aside__feedback--open')
+  mainElBlur.style.setProperty('filter', 'blur(0)')
+  sidebarEl.style.setProperty('filter', 'blur(0)')
+  blockInpt.forEach((value) => {
+    value.classList.remove('form__block--hidden')
+  })
+})
+
+chatBtn.addEventListener('click', () => {
+  feedbackEl.classList.add('aside__feedback--open')
+  titleContent.textContent = 'Заказать звонок'
+  mainElBlur.style.setProperty('filter', 'blur(2px)')
+  sidebarEl.style.setProperty('filter', 'blur(2px)')
+  blockInpt.forEach((value) => {
+    value.classList.add('form__block--hidden')
+  })
+})
+
+const readMoreBtn = document.querySelector('.about-button__read-more')
+const mainDescr = document.querySelector('.main__about-description')
+const readMoreBtnState = {'show' : false}
+const arrowEl = document.querySelector('.about-button__arrow')
+
+readMoreBtn.addEventListener('click', () => {
+  if(!readMoreBtnState.show) {
+    mainDescr.classList.add('main__about-description--open')
+    readMoreBtn.textContent = 'Скрыть'
+    arrowEl.classList.add('about-button__arrow--rotete')
+    readMoreBtnState.show = true
+  }
+  else if(readMoreBtnState.show){
+    readMoreBtn.textContent = 'Читать далее'
+    mainDescr.classList.remove('main__about-description--open')
+    arrowEl.classList.remove('about-button__arrow--rotete')
+    readMoreBtnState.show = false
+  }
+})
