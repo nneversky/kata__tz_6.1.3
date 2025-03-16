@@ -107,20 +107,64 @@ chatBtn.addEventListener('click', () => {
 
 const readMoreBtn = document.querySelector('.about-button__read-more')
 const mainDescr = document.querySelector('.main__about-description')
-const readMoreBtnState = {'show' : false}
+const readMoreBtnState = { 'show': false }
 const arrowEl = document.querySelector('.about-button__arrow')
 
 readMoreBtn.addEventListener('click', () => {
-  if(!readMoreBtnState.show) {
+  if (!readMoreBtnState.show) {
     mainDescr.classList.add('main__about-description--open')
     readMoreBtn.textContent = 'Скрыть'
     arrowEl.classList.add('about-button__arrow--rotete')
     readMoreBtnState.show = true
-  }
-  else if(readMoreBtnState.show){
+  } else if (readMoreBtnState.show) {
     readMoreBtn.textContent = 'Читать далее'
     mainDescr.classList.remove('main__about-description--open')
     arrowEl.classList.remove('about-button__arrow--rotete')
     readMoreBtnState.show = false
+  }
+})
+
+let newSwiper
+
+const newInitSwiper = () => {
+  if (window.innerWidth < 768 && !newSwiper) {
+    newSwiper = new Swiper('.swiper__container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination__scroll',
+        clickable: true,
+        type: 'bullets'
+      },
+      navigation: {
+        nextEl: '.slider__button__next-icon'
+      },
+      slidesPerView: 'auto',
+      // spaceBetween: 15
+    })
+  } else if (window.innerWidth >= 768 && newSwiper) {
+    newSwiper.destroy(true, true)
+    newSwiper = undefined
+  }
+}
+
+window.addEventListener('load', newInitSwiper)
+window.addEventListener('resize', newInitSwiper)
+
+const showMoreBtnSwiper = document.querySelector('.show-more__swiper__button')
+const swiperContainer = document.querySelector('.swiper__container')
+const showMoreArrowSwiper = document.querySelector('.show-more__swiper__arrow')
+const swiperContainerState = {show : false}
+
+showMoreBtnSwiper.addEventListener('click', () => {
+  if(!swiperContainerState.show) {
+    swiperContainer.classList.add('swiper__container--open')
+    showMoreBtnSwiper.textContent = 'Скрыть'
+    showMoreArrowSwiper.classList.add('arrow__top')
+    swiperContainerState.show = true
+  } else if (swiperContainerState.show) {
+    swiperContainer.classList.remove('swiper__container--open')
+    showMoreBtnSwiper.textContent = 'Показать все'
+    showMoreArrowSwiper.classList.remove('arrow__top')
+    swiperContainerState.show = false
   }
 })

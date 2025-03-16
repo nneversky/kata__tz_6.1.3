@@ -3,7 +3,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  min-height: 900px;
+  height: 100em;
   background-color: $bgColor;
   z-index: 2000;
   transform: translateX(2000px);
@@ -116,7 +116,7 @@ input::placeholder {
 @media (min-width: 1366px) {
   .aside__feedback {
     padding-top: 15px;
-    width: 440px;
+    width: 650px;
     min-height: 900px;
     border-left: 1px $borderColor solid;
   }
