@@ -78,6 +78,7 @@ const feedbackCloseBtn = document.querySelector('.feedback__close')
 const blockInpt = document.querySelectorAll('.form__block--chat')
 const titleContent = document.querySelector('.title__text')
 const sidebarEl = document.querySelector('.sidebar')
+const elbody = document.querySelector('body')
 
 callBtn.addEventListener('click', () => {
   feedbackEl.classList.add('aside__feedback--open')
@@ -171,11 +172,11 @@ showMoreBtnSwiper.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.service-block--mobile', {
-    loop: false, // Бесконечная прокрутка
+    loop: true, // Бесконечная прокрутка
     slidesPerView: 'auto', // Автоматическое количество слайдов
     spaceBetween: 16, // Расстояние между слайдами
     pagination: {
-      el: '.swiper-pagination', // Пагинация
+      el: '.swiper-pagination--mobile', // Пагинация
       clickable: true, // Кликабельные точки
     },
   });

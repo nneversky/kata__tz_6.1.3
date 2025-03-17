@@ -36,7 +36,7 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #eaeaea;
+  border: 1px solid $formBorderColor;
 }
 
 .slide__img {
@@ -55,36 +55,38 @@ html {
   background-image: url('../img/go-ic.svg');
 }
 
-.slide__lenovo > .slide__link > .slide__img {
-  background-image: url('../img/pictures/lenovo.png');
-}
+.slide {
+  &__lenovo > .slide__link > .slide__img {
+    background-image: url('../img/pictures/lenovo.png');
+  }
 
-.slide__samsung > .slide__link > .slide__img {
-  background-image: url('../img/pictures/samsung.png');
-}
+  &__samsung > .slide__link > .slide__img {
+    background-image: url('../img/pictures/samsung.png');
+  }
 
-.slide__apple > .slide__link > .slide__img {
-  background-image: url('../img/pictures/apple.png');
-}
+  &__apple > .slide__link > .slide__img {
+    background-image: url('../img/pictures/apple.png');
+  }
 
-.slide__bosch > .slide__link > .slide__img {
-  background-image: url('../img/pictures/bosch.png');
-}
+  &__bosch > .slide__link > .slide__img {
+    background-image: url('../img/pictures/bosch.png');
+  }
 
-.slide__hp > .slide__link > .slide__img {
-  background-image: url('../img/pictures/hp.png');
-}
+  &__hp > .slide__link > .slide__img {
+    background-image: url('../img/pictures/hp.png');
+  }
 
-.slide__acer > .slide__link > .slide__img {
-  background-image: url('../img/pictures/acer.png');
-}
+  &__acer > .slide__link > .slide__img {
+    background-image: url('../img/pictures/acer.png');
+  }
 
-.slide__viewSonic > .slide__link > .slide__img {
-  background-image: url('../img/pictures/viewSonic.png');
-}
+  &__viewSonic > .slide__link > .slide__img {
+    background-image: url('../img/pictures/viewSonic.png');
+  }
 
-.slide__sony > .slide__link > .slide__img {
-  background-image: url('../img/pictures/sony.png');
+  &__sony > .slide__link > .slide__img {
+    background-image: url('../img/pictures/sony.png');
+  }
 }
 
 .swiper-button-next {
@@ -106,7 +108,7 @@ html {
 }
 
 .swiper-pagination-bullet-active {
-  background: #b5b6bc;
+  background: $formColor;
   opacity: 1;
 }
 
@@ -213,37 +215,34 @@ html {
   display: none;
 }
 
-.time__service {
-  width: 100px;
-  height: 30px;
-}
-
-.service-card__time {
-  display: flex;
-  align-items: center;
-}
-
-.card__button {
-  transform: translateX(-150px);
-}
-
 .service-card {
-  width: 260px;
-  height: 200px;
-  background-color: $bgColor;
+  width: 330px;
+  height: 220px;
+  display: grid;
+  grid-template-rows: 80px 60px 60px;
   margin: 0 auto;
+}
+
+.service-card--row {
+  margin-left: 5%;
+  display: grid;
+  grid-template-rows: 20px;
 }
 
 .service-block {
   display: none;
 }
 
-.card {
+.row__name--service {
   color: $secondaryTextColor;
   font-weight: 500;
 }
 
-.service {
+.button--service {
+  transform: translateY(-20px);
+}
+
+.row__service {
   font-weight: 400;
 }
 
@@ -252,15 +251,79 @@ th {
   color: $secondaryTextColor;
 }
 
+.swiper__container__nav--mobile {
+  transform: translate(-5%, 10px);
+  width: 100vw;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.swiper-pagination--mobile {
+  width: 10px;
+  height: 20px;
+  display: inline-block;
+  line-height: 30px;
+}
+
 td {
   font-weight: 400;
   color: $textColor;
+}
+
+.service-card {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.about__price {
+  margin-left: 20px;
+  text-align: left;
+  max-width: 420px;
+  max-height: 60px;
+}
+
+.about__commercial-offer {
+  margin-top: 60px;
+  margin-left: 20px;
+  max-width: 192px;
+  font-weight: 600;
+}
+
+.offer__link {
+  text-decoration: none;
+}
+
+.about__dev {
+  width: 100vw;
+}
+
+.dev__text {
+  text-align: center;
+}
+
+.offer__text::after {
+  content: ' ';
+  display: inline-block;
+  width: 24px;
+  height: 28px;
+  background: url('../img/arrow-text.svg');
+  transform: translateY(9px);
 }
 
 @media (min-width: 768px) {
   body,
   html {
     min-width: 768px;
+  }
+
+  .about__commercial-offer {
+    max-width: 316px;
+  }
+
+  .about__dev {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .service-block--mobile {
@@ -288,18 +351,6 @@ td {
   .service-block__table {
     margin: 0 auto;
   }
-
-  // th {
-  // }
-
-  // td:nth-child(1) {
-  //   width: 90%;
-  //   // background-color: blue;
-  // }
-
-  // td {
-  //   margin-top: 20px;
-  // }
 
   .service__button {
     padding-right: 5vw;
@@ -416,6 +467,15 @@ td {
     th:nth-child(3),
     td:nth-child(3) {
       width: 10%;
+      text-align: center;
+    }
+
+    .dev__text {
+      max-width: 330px;
+    }
+
+    .about__dev {
+      max-width: 60vw;
       text-align: center;
     }
 
