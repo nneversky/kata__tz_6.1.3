@@ -8,11 +8,12 @@
     <title>Webpack 4 Starter</title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
+    <div class="head__blur"></div>
     <header class="header">
       <div class="header__left-side">
         <button class="header__menu header__btn"></button>
         <div class="header__border-line header__left-border header__btn--hidden"></div>
-        <a href="#"><img src="./img/logo.svg" class="header__logo" alt="logo"></a>
+        <a class="header__link" href="#"><img src="./img/logo.svg" class="header__logo" alt="logo"></a>
       </div>
       <div class="header__right-side">
         <button class="header__call header__btn--hidden header__btn"></button>
@@ -65,7 +66,7 @@
       <div class="header__sidebar">
         <div class="header__sidebar--left-side">
           <button class="header__close header__btn"></button>
-          <a href="#"><img src="./img/logo.svg" class="header__logo" alt="logo"></a>
+          <a href="#" class="header__logo-link_sidebar"><img src="./img/logo.svg" class="header__logo" alt="logo"></a>
         </div>
         <button class="header__lens header__btn"></button>
       </div>
@@ -102,7 +103,7 @@
       <div class="main__title title">
         <div class="main__title-service">
           <div class="main__title-left-border"></div>
-          <p class="main__title-text">Услуги и сервисы</p>
+          <h1 class="main__title-text">Услуги и сервисы</h1>
         </div>
         <div class="main__title-buttons">
           <div class="main__btn main__btn--settings">
@@ -148,8 +149,8 @@
         </div>
       </div>
       <header class="head">
-        <div class="head__description description">
-          <span class="description__text">Ремонт техники различных брендов</span>
+        <div class="head__description description first__description">
+          <h1 class="description__text">Ремонт техники различных брендов</h1>
         </div>
       </header>
       <main class="main swiper">
@@ -246,8 +247,8 @@
         </div>
       </footer>
     <header class="head">
-      <div class="head__description description">
-        <span class="description__text">Ремонт различных видов техники</span>
+      <div class="head__description description types__equipment">
+        <h1 class="description__text">Ремонт различных видов техники</h1>
       </div>
     </header>
     <div class="swiper-wrapper__gradient-right swiper-wrapper__gradient"></div>
@@ -292,10 +293,12 @@
       <button class="show-more__button show-more__swiper__button">Показать все</button>
     </div>
     <header class="head">
-      <div class="head__description description">
+      <div class="head__description description description__price">
         <span class="description__text">Цены на услуги</span>
       </div>
     </header>
+    <div class="swiper-container__gradient-left swiper-container__gradient"></div>
+    <div class="swiper-container__gradient-right swiper-container__gradient"></div>
     <div class="service-block--mobile swiper-container">
       <div class="swiper-wrapper">
         <div class="service-card swiper-slide">
