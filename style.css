@@ -576,7 +576,7 @@ td {
     margin: 0; }
   .swiper__container__wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 300px); }
+    grid-template-columns: repeat(4, 250px); }
   .swiper__container--open {
     height: 350px; }
   .slider {
