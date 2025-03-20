@@ -6,21 +6,41 @@ html {
 
 .head {
   margin-top: 10px;
+  margin-bottom: 25px;
   display: flex;
   justify-content: center;
 }
 
 .head__description {
-  width: 288px;
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  background-color: $bgColorElement;
+  justify-content: center;
+  align-self: center;
+  border-top: 1px $borderColor solid;
+  background: linear-gradient(90deg, $bgColor, $bgColorElement)
 }
 
+.description__price {
+  height: 56px;
+}
+
+
 .description__text {
-  margin: 0 auto;
+  margin: auto 0;
+  width: 90%;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
   text-transform: uppercase;
+  color: $activeBorderColor;
+  background-color: $bgColorElement;
+  background: linear-gradient(90deg, $bgColor, $bgColorElement)
 }
 
 .main {
-  margin-top: 35px;
+  margin-top: 20px;
 }
 
 .slider {
@@ -30,6 +50,7 @@ html {
 }
 
 .slide {
+  background-color: $bgColorElement;
   width: 240px;
   height: 72px;
   border-radius: 6px;
@@ -45,6 +66,7 @@ html {
   background-size: contain;
   background-repeat: no-repeat;
   transform: scale(1.1);
+  background-color: $bgColorElement;
 }
 
 .button__next-icon {
@@ -98,7 +120,7 @@ html {
 }
 
 .swiper__scrollbar {
-  margin-top: 35px;
+  margin-top: 45px;
 }
 
 .swiper-pagination-bullet {
@@ -114,19 +136,22 @@ html {
 
 .gradient {
   position: absolute;
+  transform: translateY(-20px);
   z-index: 10;
   width: 24px;
   height: 81px;
 }
 
 .slider__gradient-right {
+  height: 90%;
   position: absolute;
   right: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), $bgColor);
 }
 
 .slider__gradient-left {
-  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), white);
+  height: 90%;
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), $bgColor);
 }
 
 .slide__button,
@@ -157,12 +182,14 @@ html {
   color: $textColor;
   font-weight: 600;
   border-radius: 6px;
-  border: 1px $textColor solid;
+  border: 1px $formBorderColor solid;
   width: 240px;
   height: 160px;
+  background-color: $bgColorElement;
 }
 
 .slider__text {
+  background-color: inherit;
   margin-left: 15px;
 }
 
@@ -194,17 +221,38 @@ html {
 }
 
 .swiper-wrapper__gradient-left {
-  left: 0;
-  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), $bgColor);
 }
 
 .swiper-wrapper__gradient-right {
   right: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), $bgColor);
+}
+
+.swiper-container__gradient {
+  z-index: 1000;
+}
+
+.swiper-container__gradient-left {
+  width: 20px;
+  height: 250px;
+  position: absolute;
+  left: 0;
+  transform: translateY(20px);
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0), $bgColor);
+}
+
+.swiper-container__gradient-right {
+  width: 20px;
+  height: 250px;
+  position: absolute;
+  right: 0;
+  transform: translateY(20px);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), $bgColor);
 }
 
 .swiper-wrapper__gradient {
-  transform: translateY(20px);
+  transform: translateY(-20px);
   z-index: 1000;
   position: absolute;
   width: 30px;
@@ -221,12 +269,15 @@ html {
   display: grid;
   grid-template-rows: 80px 60px 60px;
   margin: 0 auto;
+  background-color: $bgColorElement;
 }
 
 .service-card--row {
   margin-left: 5%;
   display: grid;
   grid-template-rows: 20px;
+  background-color: inherit;
+  border-radius: 6px;
 }
 
 .service-block {
@@ -243,6 +294,7 @@ html {
 }
 
 .row__service {
+  background-color: inherit;
   font-weight: 400;
 }
 
@@ -295,6 +347,7 @@ td {
 }
 
 .about__dev {
+  margin-top: 50px;
   width: 100vw;
 }
 
@@ -321,6 +374,10 @@ td {
     max-width: 316px;
   }
 
+  .head__description {
+    height: 56px;
+  }
+
   .about__dev {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -333,10 +390,6 @@ td {
   .head {
     margin-left: 20px;
     justify-content: left;
-  }
-
-  .head__description {
-    width: auto;
   }
 
   .swiper-wrapper__gradient {
@@ -383,13 +436,13 @@ td {
     margin: 0 auto;
     width: 100vw;
     margin-top: 30px;
-    height: 160px;
+    height: 150px;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
   }
 
   .swiper__container--open {
-    height: 500px;
+    height: 460px;
   }
 
   .swiper__container__wrapper {
@@ -411,12 +464,12 @@ td {
     display: grid;
     grid-template-columns: repeat(3, 230px);
     gap: 20px;
-    height: 150px;
+    height: 140px;
     transition: all 0.4s ease-in-out;
   }
 
   .show-more__slider {
-    height: 245px;
+    height: 235px;
   }
 
   .slide {
@@ -512,7 +565,7 @@ td {
 
     .slider {
       gap: 20px 35px;
-      margin-left: 0;
+      margin-left: 2%;
       grid-template-columns: repeat(4, 230px);
     }
 

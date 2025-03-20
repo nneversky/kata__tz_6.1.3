@@ -46,13 +46,28 @@ body {
   margin: 0 auto;
 }
 
+.head__blur {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 2300px;
+  height: 2000px;
+  z-index: 900;
+  opacity: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.head__blur--active {
+  display: block;
+}
+
 .header__btn {
   cursor: pointer;
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
   border: none;
-  background-color: $iconColor;
   transition: all 0.2s ease-in-out;
 }
 
@@ -98,6 +113,7 @@ body {
 }
 
 .header {
+  background-color: $bgColorElement;
   display: flex;
   height: 88px;
   border-bottom: 1px $borderColor solid;
@@ -108,9 +124,18 @@ body {
 
 .header__left-side,
 .header__right-side {
+  background-color: $bgColorElement;
   align-items: center;
   display: flex;
   gap: 18px;
+}
+
+.header__logo {
+  background-color: $bgColorElement
+}
+
+.header__link {
+  background-color: inherit;
 }
 
 .header__btn--hidden {
@@ -161,7 +186,7 @@ body {
   width: 30px;
   height: 45px;
   transform: rotate(90deg);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), $bgColor);
 }
 
 .main__scroll__gradient-right {
@@ -170,7 +195,7 @@ body {
   width: 30px;
   height: 45px;
   transform: rotate(-90deg);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), $bgColor);
 }
 
 .main__side-bar-nav {
@@ -185,6 +210,7 @@ body {
 
 .main__side-bar-link:hover {
   border: 2px $buttonHoverColor solid;
+  background-color: $bgColorElement;
 }
 
 .main__side-bar-link {
@@ -211,15 +237,19 @@ body {
   overflow: hidden;
   width: 90%;
   margin: 0 auto;
-  height: 90px;
+  height: 80px;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
   margin-bottom: 10px;
 }
 
+.types__equipment {
+  margin-top: 10px;
+}
+
 .main__about-description--open {
-  height: 210px;
+  height: 180px;
 }
 
 .main__about-read-more {
@@ -269,7 +299,7 @@ body {
 .main__description-picture {
   width: 100%;
   margin-top: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .header__left-border {
@@ -363,7 +393,7 @@ body {
     body,
     html {
       margin: 0 auto;
-      width: 1096px;
+      width: 1366px;
     }
 
     .main__scroll__gradient {

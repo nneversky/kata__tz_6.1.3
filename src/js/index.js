@@ -13,12 +13,14 @@ openButton.addEventListener('click', () => {
   sidebar.classList.add('sidebar--open')
   mainElBlur.style.setProperty('filter', 'blur(2px)')
   headElBlur.style.setProperty('filter', 'blur(2px)')
+  blurEl.classList.add('head__blur--active')
 })
 
 closeButton.addEventListener('click', () => {
   sidebar.classList.remove('sidebar--open')
   mainElBlur.style.setProperty('filter', 'blur(0)')
   headElBlur.style.setProperty('filter', 'blur(0)')
+  blurEl.classList.remove('head__blur--active')
 })
 
 const initSwiper = () => {
@@ -79,18 +81,35 @@ const blockInpt = document.querySelectorAll('.form__block--chat')
 const titleContent = document.querySelector('.title__text')
 const sidebarEl = document.querySelector('.sidebar')
 const elbody = document.querySelector('body')
+const blurEl = document.querySelector('.head__blur')
+
 
 callBtn.addEventListener('click', () => {
   feedbackEl.classList.add('aside__feedback--open')
   titleContent.textContent = 'Обратная связь'
   mainElBlur.style.setProperty('filter', 'blur(2px)')
   sidebarEl.style.setProperty('filter', 'blur(2px)')
+  blurEl.classList.add('head__blur--active')
 })
 
 feedbackCloseBtn.addEventListener('click', () => {
   feedbackEl.classList.remove('aside__feedback--open')
   mainElBlur.style.setProperty('filter', 'blur(0)')
   sidebarEl.style.setProperty('filter', 'blur(0)')
+  blurEl.classList.remove('head__blur--active')
+  blockInpt.forEach((value) => {
+    value.classList.remove('form__block--hidden')
+  })
+})
+
+
+blurEl.addEventListener('click', () => {
+  feedbackEl.classList.remove('aside__feedback--open')
+  mainElBlur.style.setProperty('filter', 'blur(0)')
+  headElBlur.style.setProperty('filter', 'blur(0)')
+  sidebarEl.style.setProperty('filter', 'blur(0)')
+  blurEl.classList.remove('head__blur--active')
+  sidebar.classList.remove('sidebar--open')
   blockInpt.forEach((value) => {
     value.classList.remove('form__block--hidden')
   })
@@ -101,10 +120,13 @@ chatBtn.addEventListener('click', () => {
   titleContent.textContent = 'Заказать звонок'
   mainElBlur.style.setProperty('filter', 'blur(2px)')
   sidebarEl.style.setProperty('filter', 'blur(2px)')
+  blurEl.classList.add('head__blur--active')
   blockInpt.forEach((value) => {
     value.classList.add('form__block--hidden')
   })
 })
+
+
 
 const readMoreBtn = document.querySelector('.about-button__read-more')
 const mainDescr = document.querySelector('.main__about-description')
@@ -172,12 +194,12 @@ showMoreBtnSwiper.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.service-block--mobile', {
-    loop: true, // Бесконечная прокрутка
-    slidesPerView: 'auto', // Автоматическое количество слайдов
-    spaceBetween: 16, // Расстояние между слайдами
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
     pagination: {
-      el: '.swiper-pagination--mobile', // Пагинация
-      clickable: true, // Кликабельные точки
+      el: '.swiper-pagination--mobile',
+      clickable: true,
     },
   });
 });

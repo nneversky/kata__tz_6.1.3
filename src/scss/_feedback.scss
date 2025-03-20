@@ -3,8 +3,8 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 1900px;
-  background-color: $bgColor;
+  height: 2300px;
+  background-color: $bgColorElement;
   z-index: 2000;
   transform: translateX(2000px);
   transition: all 0.4s ease-in-out;
@@ -15,6 +15,7 @@
 }
 
 .feedback__title {
+  background-color: inherit;
   display: flex;
   gap: 15px;
   align-items: center;
@@ -29,6 +30,7 @@
 }
 
 .title__text {
+  background-color: inherit;
   font-weight: bold;
   font-size: 24px;
   line-height: 32px;
@@ -36,10 +38,16 @@
 }
 
 .form__block {
+  background-color: $bgColorElement;
   margin-top: 15px;
 }
 
+label {
+  background-color: $bgColorElement;
+}
+
 .block__input {
+  background-color: $bgColorElement;
   border: 1px $formBorderColor solid;
   border-radius: 8px;
   width: 288px;
@@ -57,21 +65,24 @@
 textarea::placeholder,
 input::placeholder {
   font-size: 16px;
+  color: $formColor;
 }
 
 .feedback__form {
   margin: 0 auto;
-
+  background-color: inherit;
   font-weight: 600;
   width: 320px;
 }
 
 .form__text {
+  background-color: inherit;
   margin-left: 15px;
   color: $activeBorderColor;
 }
 
 .colortext {
+  background-color: inherit;
   color: $pinkColor;
 }
 
@@ -119,6 +130,7 @@ input::placeholder {
     width: 650px;
     min-height: 900px;
     border-left: 1px $borderColor solid;
+    box-shadow: -34px 0px 25px -14px rgba(34, 60, 80, 0.14);
   }
 
   .aside__feedback--open {
@@ -131,6 +143,5 @@ input::placeholder {
     position: absolute;
     left: -80px;
     transform: translateY(20px);
-
   }
 }

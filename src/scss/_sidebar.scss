@@ -3,14 +3,15 @@
   position: absolute;
   top: 0;
   width: 100vw;
-  height: 1900px;
-  background-color: $bgColor;
+  height: 2300px;
+  background-color: $bgColorElement;
   z-index: 1000;
   transform: translateX(-900px);
   transition: all 0.4s ease-in-out;
 }
 
 .header__sidebar {
+  background-color: inherit;
   justify-content: space-evenly;
   display: flex;
   align-items: center;
@@ -19,9 +20,14 @@
 }
 
 .header__sidebar--left-side {
+  background-color: inherit;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.header__logo-link_sidebar {
+  background-color: inherit;
 }
 
 .sidebar--open {
@@ -29,11 +35,13 @@
 }
 
 .side-menu {
+  background-color: inherit;
   display: flex;
   flex-direction: column;
 }
 
 .side-menu__button {
+  background-color: inherit;
   box-sizing: border-box;
   border: none;
   display: flex;
@@ -44,11 +52,12 @@
 .side-menu__button--active {
   display: flex;
   align-items: center;
-  transform: translateX(-6px);
+  // transform: translateX(-6px);
   gap: 15px;
   margin-left: 0;
   color: $secondaryTextColor;
   border: none;
+  background-color: none;
 }
 
 .side-menu__button--no-active {
@@ -61,6 +70,7 @@
 }
 
 .side-menu__button--active::before {
+  transform: translateX(-6px);
   content: '';
   display: flex;
   width: 4px;
@@ -98,11 +108,13 @@
 }
 
 .page-footer {
+  background-color: $bgColorElement;
   margin: 25px;
   margin-left: 20px;
 }
 
 .contacts {
+  background-color: $bgColorElement;
   margin-top: 15px;
   flex-direction: column;
   display: flex;
@@ -110,19 +122,27 @@
 }
 
 .page-footer__email {
+  background-color: inherit;
   font-weight: 600;
 }
 
 .page-footer__phone {
+  background-color: inherit;
   font-weight: bold;
 }
 
 .page-footer__buttons {
+  background-color: $bgColorElement;
   display: flex;
   gap: 15px;
 }
 
+.page-footer__language-switcher {
+  background-color: $bgColorElement;
+}
+
 .page-footer__language-button {
+  background-color: inherit;
   transition: all 0.1s ease-in-out;
   border: none;
 }
@@ -132,6 +152,10 @@
   cursor: pointer;
 }
 
+.page-footer__contacts {
+  background-color: inherit;
+}
+
 .page-footer__language-button--active {
   color: $secondaryTextColor;
 }
@@ -139,14 +163,17 @@
 @media (min-width: 768px) {
   .sidebar {
     width: 320px;
+    box-shadow: 34px 0px 25px -14px rgba(34, 60, 80, 0.14);
   }
 }
 
 @media (min-width: 1366px) {
   .sidebar {
+    padding-top: 35px;
     display: block;
     position: sticky;
     transform: translateX(-40px);
+    box-shadow: 0;
   }
 
   .header__close {
